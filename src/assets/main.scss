@@ -1,0 +1,111 @@
+.account-wrapper {
+    min-height: 100vh;
+    background: var(--front-bg);
+}
+
+.account-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+
+    .role-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .role {
+            display: flex;
+            align-items: center !important;
+
+            input[type=radio] {
+                display: none;
+
+                & + label span {
+                    display: inline-block !important;
+                    height: 15px !important;
+                    width: 15px !important;
+                    padding: 0rem !important;
+                    border: 2px solid var(--front-color);
+                    cursor: pointer;
+                    border-radius: 50%;
+                }
+
+                &:checked + label span {
+                    background: var(--main-gradient);
+                    border: 2px solid var(--front-bg);
+                }
+            }
+
+            span:first-child {
+                padding-right: 1rem;
+                font-size: .8rem;
+                color: #333;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .account-header {
+        text-align: center !important;
+
+        h3 {
+            width: 100%;
+            font-size: 2.8rem;
+            text-align: center !important;
+
+            span {
+                color: var(--front-color);
+            }
+        }
+
+        small {
+            font-size: 1rem;
+            color: #444;
+            font-weight: 600;
+        }
+    }
+
+    .account-tabs {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem 0rem;
+
+        button {
+            background: #fff;
+            color: var(--text-grey);
+            text-transform: uppercase;
+            border: none;
+            padding: .6rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-bottom: 3px solid #efefef;
+
+            &.is-active {
+                border-bottom: 3px solid var(--front-color);
+            }
+        }
+    }
+
+    .account-form-wrapper {
+        width: 400px;
+
+        .account-form {
+            padding: .6rem 0rem;
+
+            h3 {
+                font-weight: 500;
+                font-size: 1.5rem;
+                color: #444;
+                margin-bottom: 1rem;
+            }
+
+            button {
+                margin-top: 1.5rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: .95rem;
+            }
+        }
+    }
+}
